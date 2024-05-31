@@ -4,15 +4,25 @@ import "fmt"
 
 func main() {
 	const TotalAllowedNiggas int = 5
-	var remainingNiggas int = 5
-	var NiggaName string
-	var NiggaCount int
+	var remainingNiggas uint = 5
+	var CustomerName string
+	var SellingNiggaCount uint
+
+	var nigga_name string
+	var niggas_details [5]string
 
 	fmt.Print("Please Enter your name:")
-	fmt.Scan(&NiggaName)
-	fmt.Printf("Hey %v Welcome to The GO - Application\n", NiggaName)
-	fmt.Printf("We have Total: %v And Remaining: %v in my Basement\n", TotalAllowedNiggas, remainingNiggas)
+	fmt.Scan(&CustomerName)
+	fmt.Printf("Hey %v Welcome to Nigga Trade Centre\n", CustomerName)
+	fmt.Printf("We have Total: %v \nAnd Remaining: %v \nniggers to Book in the Basement\n", TotalAllowedNiggas, remainingNiggas)
 	fmt.Print("Please Enter the number of Niggas to Book:")
-	fmt.Scan(&NiggaCount)
-	fmt.Printf("%v Booked %v Niggers for their Basement", NiggaName, NiggaCount)
+	fmt.Scan(&SellingNiggaCount)
+	fmt.Printf("%v Booked %v Niggers for their Basement\n", CustomerName, SellingNiggaCount)
+	fmt.Printf("Please Provide the required information ")
+	fmt.Print("Please Enter your nigga's Name: ")
+	fmt.Scan(&nigga_name)
+	niggas_details[0] = nigga_name
+	remainingNiggas = remainingNiggas - SellingNiggaCount
+	fmt.Printf("Remaining Niggas are : %v", remainingNiggas)
+
 }
